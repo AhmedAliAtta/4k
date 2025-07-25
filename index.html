@@ -1,3 +1,99 @@
+🔄 **HTML Edit Mode** - Processing your edit request...
+
+```
+```diff
+<<<<<<< SEARCH
+                            <div class="flex items-start">
+                                <div class="text-yellow-400 text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900 mb-1">العنوان</h4>
+                                    <p class="text-gray-700">شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                                </div>
+                            </div>
+=======
+                            <div class="flex items-start">
+                                <div class="text-yellow-400 text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900 mb-1">العنوان</h4>
+                                    <p class="text-gray-700">مصر، القاهرة</p>
+                                </div>
+                            </div>
+>>>>>>> REPLACE
+```
+
+```
+
+```   
+```diff
+<<<<<<< SEARCH
+      // تحسين تجربة النموذج
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // يمكنك هنا إضافة كود إرسال النموذج
+                alert('شكرًا لتواصلك معنا! سوف نرد عليك في أقرب وقت ممكن.');
+                this.reset();
+            });
+        }
+=======
+      // إرسال بيانات النموذج
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // جمع بيانات النموذج
+                const formData = new FormData(this);
+                const formObject = {};
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+                
+                // هنا يمكنك إضافة كود لإرسال البيانات إلى الخادم
+                // مثلاً باستخدام fetch() API
+                
+                // عرض رسالة تأكيد للعميل
+                alert(`تم استلام طلبك بنجاح يا ${formObject.name}!\nسنتصل بك على الرقم ${formObject.phone} قريبًا.`);
+                this.reset();
+            });
+        }
+>>>>>>> REPLACE
+```
+
+```
+
+```   
+```diff
+<<<<<<< SEARCH
+                                <option value="">اختر خدمة</option>
+                                <option value="computer">صيانة شاشات الكمبيوتر</option>
+                                <option value="tv">صيانة شاشات التلفاز</option>
+                                <option value="phone">صيانة شاشات الهواتف</option>
+                                <option value="other">خدمة أخرى</option>
+=======
+                                <option value="">اختر خدمة</option>
+                                <option value="tv">صيانة شاشات التلفاز</option>
+                                <option value="projector">صيانة أجهزة البروجيكتور</option>
+                                <option value="other">خدمة أخرى</option>
+>>>>>>> REPLACE
+```
+
+
+
+These changes will:
+1. Update the address to show Cairo, Egypt instead of Riyadh
+2. Enhance the form submission to show a more detailed confirmation message with the customer's name and phone
+3. Update the service options by removing computer/phone repair and adding projector repair as requested
+
+Let me know if you would like to make any additional modifications to these changes.Here is the updated HTML content after applying above edits:
+
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -338,9 +434,8 @@
                             <label for="service" class="block text-gray-700 font-bold mb-2">نوع الخدمة المطلوبة</label>
                             <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
                                 <option value="">اختر خدمة</option>
-                                <option value="computer">صيانة شاشات الكمبيوتر</option>
                                 <option value="tv">صيانة شاشات التلفاز</option>
-                                <option value="phone">صيانة شاشات الهواتف</option>
+                                <option value="projector">صيانة أجهزة البروجيكتور</option>
                                 <option value="other">خدمة أخرى</option>
                             </select>
                         </div>
@@ -365,7 +460,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-blue-900 mb-1">العنوان</h4>
-                                    <p class="text-gray-700">شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                                    <p class="text-gray-700">مصر، القاهرة</p>
                                 </div>
                             </div>
                             
@@ -375,7 +470,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-blue-900 mb-1">الهاتف</h4>
-                                    <p class="text-gray-700">01024406499</p>
+                                    <p class="text-gray-700">+20 1024406499</p>
                                 </div>
                             </div>
                             
@@ -451,7 +546,7 @@
     </footer>
 
     <!-- زر الواتساب العائم -->
-    <a href="https://wa.me/01024406499" class="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-btn hover:bg-green-600 transition z-50">
+    <a href="https://wa.me/201024406499" class="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-btn hover:bg-green-600 transition z-50">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
@@ -497,14 +592,24 @@
             });
         });
 
-        // تحسين تجربة النموذج
+        // إرسال بيانات النموذج
         const contactForm = document.querySelector('form');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // يمكنك هنا إضافة كود إرسال النموذج
-                alert('شكرًا لتواصلك معنا! سوف نرد عليك في أقرب وقت ممكن.');
+                // جمع بيانات النموذج
+                const formData = new FormData(this);
+                const formObject = {};
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+                
+                // هنا يمكنك إضافة كود لإرسال البيانات إلى الخادم
+                // مثلاً باستخدام fetch() API
+                
+                // عرض رسالة تأكيد للعميل
+                alert(`تم استلام طلبك بنجاح يا ${formObject.name}!\nسنتصل بك على الرقم ${formObject.phone} قريبًا.`);
                 this.reset();
             });
         }
@@ -512,3 +617,4 @@
 </body>
 </html>
 
+```
