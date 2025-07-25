@@ -1,3 +1,90 @@
+🔄 **HTML Edit Mode** - Processing your edit request...
+
+ Here are the changes needed to send WhatsApp messages when orders are submitted:
+
+1. First, update the JavaScript section to handle WhatsApp message sending:
+
+
+```diff
+<<<<<<< SEARCH
+        // إرسال بيانات النموذج
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // جمع بيانات النموذج
+                const formData = new FormData(this);
+                const formObject = {};
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+                
+                // هنا يمكنك إضافة كود لإرسال البيانات إلى الخادم
+                // مثلاً باستخدام fetch() API
+                
+                // عرض رسالة تأكيد للعميل
+                alert(`تم استلام طلبك بنجاح يا ${formObject.name}!\nسنتصل بك على الرقم ${formObject.phone} قريبًا.`);
+                this.reset();
+            });
+        }
+=======
+        // إرسال بيانات النموذج إلى الواتساب
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // جمع بيانات النموذج
+                const formData = new FormData(this);
+                const formObject = {};
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+                
+                // إعداد رسالة الواتساب
+                const whatsappMessage = `طلب جديد%0A%0Aالاسم: ${formObject.name}%0Aالهاتف: ${formObject.phone}%0Aالخدمة: ${formObject.service}%0Aالرسالة: ${formObject.message}`;
+                
+                // إرسال الطلب عبر الواتساب
+                window.open(`https://wa.me/201024406499?text=${whatsappMessage}`, '_blank');
+                
+                // عرض رسالة تأكيد للعميل
+                alert(`تم إرسال طلبك بنجاح يا ${formObject.name}!\nسيتم التواصل معك قريبًا على الواتساب.`);
+                this.reset();
+            });
+        }
+>>>>>>> REPLACE
+
+```
+```
+
+2. Update the WhatsApp floating button:
+
+
+```diff
+<<<<<<< SEARCH
+    <a href="https://wa.me/201024406499" class="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-btn hover:bg-green-600 transition z-50">
+=======
+    <a href="https://wa.me/201024406499?text=مرحباً، أريد الإستفسار عن خدماتكم" class="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-btn hover:bg-green-600 transition z-50">
+>>>>>>> REPLACE
+```
+
+
+
+These changes will:
+1. Modify the form submission to open WhatsApp with a pre-filled message containing all the form details
+2. Update the floating WhatsApp button to include a default inquiry message
+3. Send the form data as a WhatsApp message to the specified number (201024406499)
+
+The WhatsApp message will include:
+- Customer name
+- Phone number 
+- Selected service 
+- Customer message
+
+Would you like me to show any other specific changes to customize this further?Here is the updated HTML content after applying above edits:
+
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -450,7 +537,7 @@
     </footer>
 
     <!-- زر الواتساب العائم -->
-    <a href="https://wa.me/201024406499" class="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-btn hover:bg-green-600 transition z-50">
+    <a href="https://wa.me/201024406499?text=مرحباً، أريد الإستفسار عن خدماتكم" class="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-btn hover:bg-green-600 transition z-50">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
@@ -496,7 +583,7 @@
             });
         });
 
-        // إرسال بيانات النموذج
+        // إرسال بيانات النموذج إلى الواتساب
         const contactForm = document.querySelector('form');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
@@ -509,11 +596,14 @@
                     formObject[key] = value;
                 });
                 
-                // هنا يمكنك إضافة كود لإرسال البيانات إلى الخادم
-                // مثلاً باستخدام fetch() API
+                // إعداد رسالة الواتساب
+                const whatsappMessage = `طلب جديد%0A%0Aالاسم: ${formObject.name}%0Aالهاتف: ${formObject.phone}%0Aالخدمة: ${formObject.service}%0Aالرسالة: ${formObject.message}`;
+                
+                // إرسال الطلب عبر الواتساب
+                window.open(`https://wa.me/201024406499?text=${whatsappMessage}`, '_blank');
                 
                 // عرض رسالة تأكيد للعميل
-                alert(`تم استلام طلبك بنجاح يا ${formObject.name}!\nسنتصل بك على الرقم ${formObject.phone} قريبًا.`);
+                alert(`تم إرسال طلبك بنجاح يا ${formObject.name}!\nسيتم التواصل معك قريبًا على الواتساب.`);
                 this.reset();
             });
         }
