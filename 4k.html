@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4K - مركز صيانة الشاشات الاحترافي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/84088054-7647-41d5-a3f8-df49a4c4bd07.png') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .floating-btn {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- شريط التنقل -->
+    <nav class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold text-yellow-400">4K</span>
+                <span class="mr-2 text-xl">مركز صيانة الشاشات</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 space-x-reverse">
+                <a href="#home" class="hover:text-yellow-400 transition">الرئيسية</a>
+                <a href="#services" class="hover:text-yellow-400 transition">خدماتنا</a>
+                <a href="#pricing" class="hover:text-yellow-400 transition">الأسعار</a>
+                <a href="#about" class="hover:text-yellow-400 transition">عن الشركة</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">اتصل بنا</a>
+            </div>
+            
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- قسم البطاقة الرئيسية -->
+    <section id="home" class="hero-section h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">صيانة شاشات بجودة <span class="text-yellow-400">4K</span></h1>
+            <p class="text-xl md:text-2xl mb-8">حلول متكاملة لصيانة وتصليح جميع أنواع الشاشات باحترافية عالية</p>
+            <a href="#contact" class="bg-yellow-400 text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition inline-block">احجز خدمتك الآن</a>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">خدماتنا المتخصصة</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- بطاقة خدمة 1 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md transition duration-300 border border-gray-200">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">صيانة شاشات الكمبيوتر</h3>
+                    <p class="text-gray-700">إصلاح عيوب الصورة، استبدال الشاشات المكسورة، معالجة مشاكل الإضاءة والوصلات لجميع أنواع شاشات الكمبيوتر.</p>
+                    <div class="mt-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2f15167f-f533-4f17-99a9-ff3497725cfd.png" alt="فني صيانة يعمل على إصلاح شاشة كمبيوتر في ورشة عمل مجهزة بأدوات احترافية" class="rounded-lg w-full h-48 object-cover" />
+                    </div>
+                </div>
+                
+                <!-- بطاقة خدمة 2 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md transition duration-300 border border-gray-200">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">صيانة شاشات التلفاز</h3>
+                    <p class="text-gray-700">تصليح مشاكل الألوان، استبدال الأجزاء الداخلية، تثبيت الشاشة الذكية، صيانة شاشات LED و LCD و OLED.</p>
+                    <div class="mt-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fccaeee5-e6d1-4634-b7fd-f2c7bbdec461.png" alt="شاشة تلفاز ضخمة معلقة على الجدار أثناء إصلاحها من قبل فني متخصص" class="rounded-lg w-full h-48 object-cover" />
+                    </div>
+                </div>
+                
+                <!-- بطاقة خدمة 3 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md transition duration-300 border border-gray-200">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">صيانة شاشات الهواتف</h3>
+                    <p class="text-gray-700">استبدال شاشات الهواتف الذكية المكسورة، إصلاح مشاكل اللمس، تصليح مشاكل الإضاءة لجميع الماركات.</p>
+                    <div class="mt-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/75b7e7e7-9edd-4fed-943e-385de5c94646.png" alt="فني صيانة يقف أمام طاولة عمل مزودة بقطع غيار شاشات هواتف مختلفة ومعدات دقيقة" class="rounded-lg w-full h-48 object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسعار -->
+    <section id="pricing" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">أسعار خدماتنا</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- بطاقة سعر 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center border-2 border-yellow-400 transform hover:scale-105 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">الصيانة الأساسية</h3>
+                    <p class="text-3xl font-bold mb-4 text-yellow-600">150 ريال</p>
+                    <ul class="text-gray-700 text-right space-y-2 mb-6">
+                        <li>فحص أولي شامل</li>
+                        <li>تنظيف الجهاز داخليًا</li>
+                        <li>إصلاح مشاكل البرامج</li>
+                        <li>ضبط إعدادات الصورة</li>
+                        <li>الضمان: 3 أشهر</li>
+                    </ul>
+                    <button class="bg-yellow-400 text-blue-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-300 transition">اختر هذه الخدمة</button>
+                </div>
+                
+                <!-- بطاقة سعر 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-blue-900 transform hover:scale-105 transition relative">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-900 text-white px-4 py-1 rounded-full text-sm font-bold">الأكثر شيوعًا</div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">استبدال الشاشة</h3>
+                    <p class="text-3xl font-bold mb-4 text-yellow-600">300 ريال</p>
+                    <ul class="text-gray-700 text-right space-y-2 mb-6">
+                        <li>استبدال الشاشة المكسورة</li>
+                        <li>قطع غيار أصلية</li>
+                        <li>تركيب احترافي</li>
+                        <li>ضمان ضد عيوب الصناعة</li>
+                        <li>الضمان: 6 أشهر</li>
+                    </ul>
+                    <button class="bg-blue-900 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-800 transition">اختر هذه الخدمة</button>
+                </div>
+                
+                <!-- بطاقة سعر 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center border-2 border-yellow-400 transform hover:scale-105 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">الصيانة الشاملة</h3>
+                    <p class="text-3xl font-bold mb-4 text-yellow-600">500 ريال</p>
+                    <ul class="text-gray-700 text-right space-y-2 mb-6">
+                        <li>صيانة كاملة للجهاز</li>
+                        <li>استبدال الأجزاء التالفة</li>
+                        <li>تنظيف شامل</li>
+                        <li>فحص كهربائي كامل</li>
+                        <li>الضمان: سنة كاملة</li>
+                    </ul>
+                    <button class="bg-yellow-400 text-blue-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-300 transition">اختر هذه الخدمة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عن الشركة -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0a5c90a7-aceb-457a-b176-59f9251c15c9.png" alt="فريق عمل 4K في ورشة الصيانة المزودة بأحدث المعدات والأدوات الفنية المتخصصة" class="rounded-lg shadow-lg w-full" />
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">عن شركة <span class="text-yellow-400">4K</span></h2>
+                    <p class="text-gray-700 mb-4 text-lg">نحن فريق من الفنيين المحترفين المتخصصين في صيانة جميع أنواع الشاشات بجودة ودقة عالية تصل إلى مستوى 4K. نقدم خدماتنا منذ أكثر من 10 سنوات، ونفتخر بثقة آلاف العملاء الذين وثقوا بنا.</p>
+                    <p class="text-gray-700 mb-6 text-lg">نستخدم أحدث التقنيات وأفضل قطع الغيار لضمان حصولك على أفضل تجربة صيانة ممكنة. رؤيتنا هي أن نكون الوجهة الأولى لصيانة الشاشات في المنطقة.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-yellow-400 text-xl mr-3 mt-1">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="text-gray-700">فنيون معتمدون من أفضل الشركات العالمية</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-yellow-400 text-xl mr-3 mt-1">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="text-gray-700">قطع غيار أصلية بضمانات طويلة الأمد</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-yellow-400 text-xl mr-3 mt-1">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="text-gray-700">خدمة سريعة ودقيقة بمعدل نجاح 98%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم السمات -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">لماذا تختار <span class="text-yellow-400">4K</span>؟</h2>
+                <p class="text-gray-700 text-lg max-w-2xl mx-auto">نحن نقدم ميزات استثنائية تضمن لكم تجربة صيانة لا مثيل لها</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- سمة 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center border border-gray-200">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">خدمة سريعة</h3>
+                    <p class="text-gray-700">إصلاحات في نفس اليوم لمعظم الأعطال</p>
+                </div>
+                
+                <!-- سمة 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center border border-gray-200">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">ضمان ممتد</h3>
+                    <p class="text-gray-700">ضمان يصل إلى سنة كاملة على الإصلاحات</p>
+                </div>
+                
+                <!-- سمة 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center border border-gray-200">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">خدمة منزلية</h3>
+                    <p class="text-gray-700">نأتي إليك إذا كنت غير قادر على الحضور</p>
+                </div>
+                
+                <!-- سمة 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center border border-gray-200">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">قطع غيار أصلية</h3>
+                    <p class="text-gray-700">نستخدم فقط قطع غيار معتمدة من الشركات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم العملاء -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">آراء عملائنا</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- رأي 1 -->
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b08ea78-7ca5-474a-812b-bc23ee8e7e46.png" alt="صورة شخصية لعميل يدعى أحمد محمد، رجل بعمر 35 سنة يرتدي نظارة وله ابتسامة ودودة" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-bold">أحمد محمد</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"أصلحوا شاشة التلفاز الخاص بي في أقل من ساعتين وكانت النتيجة مذهلة! الآن الصورة أفضل من الجديدة. شكرًا لفريق 4K المحترف."</p>
+                </div>
+                
+                <!-- رأي 2 -->
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3018a7cf-67c5-4784-846d-f78af6799e96.png" alt="صورة شخصية لعميلة تدعى نوره العتيبي، سيدة بعمر 28 سنة بنظرة واثقة وملامح محجبة" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-bold">نوره العتيبي</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"تعاملوا مع شاشة هاتفي المكسورة بحرفية عالية، الأسعار مناسبة والخدمة ممتازة. أنصح الجميع بالتعامل معهم."</p>
+                </div>
+                
+                <!-- رأي 3 -->
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dfd9c73a-56e5-49ba-9409-42d87f4eb9bb.png" alt="صورة شخصية لعميل يدعى خالد السعدي، رجل بعمر 42 سنة يحمل تعابير وجه جادة وثقة" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-bold">خالد السعدي</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"ممتازون في صيانة شاشات الكمبيوتر! أصلحوا مشكلة كانت عندي منذ أشهر في أقل من يوم وبتكلفة معقولة."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">تواصل معنا</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">الاسم الكامل</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="أدخل اسمك">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">البريد الإلكتروني</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="أدخل بريدك الإلكتروني">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-bold mb-2">رقم الهاتف</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="أدخل رقم هاتفك">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-bold mb-2">نوع الخدمة المطلوبة</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                <option value="">اختر خدمة</option>
+                                <option value="computer">صيانة شاشات الكمبيوتر</option>
+                                <option value="tv">صيانة شاشات التلفاز</option>
+                                <option value="phone">صيانة شاشات الهواتف</option>
+                                <option value="other">خدمة أخرى</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">الرسالة</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="أدخل رسالتك"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-yellow-400 text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition w-full">إرسال الطلب</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6">معلومات التواصل</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-yellow-400 text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900 mb-1">العنوان</h4>
+                                    <p class="text-gray-700">شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-400 text-xl mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900 mb-1">الهاتف</h4>
+                                    <p class="text-gray-700">+966 12 345 6789</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-400 text-xl mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900 mb-1">البريد الإلكتروني</h4>
+                                    <p class="text-gray-700">info@4k-repair.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-400 text-xl mr-4 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900 mb-1">ساعات العمل</h4>
+                                    <p class="text-gray-700">من السبت إلى الخميس: 9 صباحًا - 9 مساءً</p>
+                                    <p class="text-gray-700">الجمعة: مغلق</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-blue-900 mb-4">تابعنا على وسائل التواصل</h4>
+                            <div class="flex space-xExample-4 space-xExample-reverse">
+                                <a href="#" class="bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-300 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-500 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتير -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="text-2xl font-bold text-yellow-400">4K</span>
+                        <span class="mr-2 text-xl">مركز صيانة الشاشات</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">حلول متكاملة لصيانة الشاشات بجودة ودقة 4K</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 space-x-reverse mb-4">
+                        <a href="#home" class="hover:text-yellow-400 transition">الرئيسية</a>
+                        <a href="#services" class="hover:text-yellow-400 transition">خدماتنا</a>
+                        <a href="#pricing" class="hover:text-yellow-400 transition">الأسعار</a>
+                        <a href="#about" class="hover:text-yellow-400 transition">عن الشركة</a>
+                        <a href="#contact" class="hover:text-yellow-400 transition">اتصل بنا</a>
+                    </div>
+                    <p class="text-gray-400">© 2023 مركز 4K لصيانة الشاشات. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر الواتساب العائم -->
+    <a href="https://wa.me/966123456789" class="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-btn hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // تنشيط القائمة المتنقلة على الهواتف
+        document.querySelector('nav button').addEventListener('click', function() {
+            const navLinks = document.querySelector('nav .md\\:flex');
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+            navLinks.classList.toggle('flex-col');
+            navLinks.classList.toggle('absolute');
+            navLinks.classList.toggle('top-16');
+            navLinks.classList.toggle('left-0');
+            navLinks.classList.toggle('right-0');
+            navLinks.classList.toggle('bg-blue-900');
+            navLinks.classList.toggle('p-4');
+            navLinks.classList.toggle('z-50');
+        });
+
+        // إغلاق القائمة عند النقر على رابط
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                const navLinks = document.querySelector('nav .md\\:flex');
+                if (navLinks.classList.contains('md:hidden')) {
+                    navLinks.classList.add('hidden');
+                    navLinks.classList.remove('flex');
+                }
+            });
+        });
+
+        // تحريك الصفحة بسلاسة عند النقر على الروابط
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // تحسين تجربة النموذج
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // يمكنك هنا إضافة كود إرسال النموذج
+                alert('شكرًا لتواصلك معنا! سوف نرد عليك في أقرب وقت ممكن.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
+
